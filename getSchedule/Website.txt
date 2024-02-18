@@ -1,0 +1,749 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <base href="https://it.pk.edu.pl/">
+
+<meta name="theme-color" content="rgb(122,164,64)">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Artur Niewiarowski">
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+<link href="css/sb-admin.css" rel="stylesheet">
+<link href="bs4-submenu.css" rel="stylesheet">
+<link href="css/colReorder.dataTables.min.css" rel="stylesheet">
+<link href="mycss.min.css?v19" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Wydział Informatyki i Telekomunikacji Politechniki Krakowskiej</title>
+<script>
+  if (location.protocol != 'https:') {
+    location.href = 'https:' + window
+      .location
+      .href
+      .replace("www.", "")
+      .substring(window.location.protocol.length);
+  }
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/readmetxt.js"></script>
+<script src="vendor/datatables/jquery.dataTables.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<script src="js/dataTables.buttons.min.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/pdfmake.min.js"></script>
+<script src="js/vfs_fonts.js"></script>
+<script src="js/buttons.html5.min.js"></script>
+<link href="css/buttons.dataTables.min.css" rel="stylesheet">
+    
+<script>
+  var news_win_hidden = ["null"];var notices_win_hidden = ["null"];var cookieinfo = ["null"];
+</script>
+
+<style>
+	
+  /*body{filter:saturate(0);}*/
+  .bg-primary {
+    background-color: #007bffe6 !important;
+  }
+
+  @media screen and (max-width:727px) {
+    .bg-primary {
+      background-color: rgb(0, 77, 153, 0.85) !important;
+    }
+  }
+
+  div.collapse ul.nav .nav-link {
+    color: white !important;
+  }
+</style>
+
+</head>
+
+<body id="page-top">
+
+<div class="fixed-top">
+  <div style="z-index:1000;width:100%;">
+
+    <div id="main" class="container-fluid">
+      <div id="mm2">
+        <div class="row">
+          <div class="col-md-8">
+
+            <table class="linkfim">
+              <tr>
+                <td>
+                  <img src="pic/logo-it-white.png" class="fimlog">
+                </td>
+
+                <td class="mtit" valign="bottom">
+                  <h4>
+                    Wydział <br> Informatyki i Telekomunikacji                  </h4>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="col-md-4 logopk">
+
+            <table class="linkpk" style="display:inline">
+              <tr>
+                <td>
+                  <img src="pic/PK.png" class="pklog">                </td>
+              </tr>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div id="institute" class="center-block" style="width:100%;padding-left:50px;background:rgb(122,164,64);">
+  <div id="institute2" class="btn-group btn-group-sm" style="overflow-x:auto;width:100%;"> 
+  
+    <a href="/?vc=f-0" class="btn btn-primary-2 readmetxt">WYDZIAŁ</a><a href="/vc/Katedra Informatyki" class="btn btn-primary-2 readmetxt">KATEDRA INFORMATYKI</a><a href="/vc/Katedra Matematyki Stosowanej" class="btn btn-primary-2 readmetxt">KATEDRA MATEMATYKI STOSOWANEJ</a><a href="https://faculty.it.pk.edu.pl/" class="btn btn-primary-2 readmetxt">COOPERATION WITH THE FACULTY (IN ENGLISH)</a>  
+</div>    
+  </div>
+
+<nav id=navb class="navbar navbar-expand-md navbar-dark sticky-top" style="background:rgb(122,164,64);background-repeat:no-repeat">
+
+  <button class="navbar-toggler sticky-top" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background:inherit;box-shadow: 0px 0px 10px grey;">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="is_desktop_hide" name="helpme">
+
+<button class="btn btn-dark"><i class="fa fa-adjust" aria-hidden="true"></i></button>
+<button class="btn btn-dark"><i class="fa fa-plus" aria-hidden="true"></i></button>
+<button class="btn btn-dark" id="faminus"><i class="fa fa-minus" aria-hidden="true"></i></button>
+<button class="btn btn-dark" id="readmetxtmobile"><i class="fa fa-assistive-listening-systems" aria-hidden="true"></i></button>
+
+
+</div>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="?reload" data-toggle="tooltip-refresh" title="Przywróć ustawienia wyświetlania elementów strony"><span class="fa fa-refresh" id="reloadme"></span></a>
+      </li>
+      
+      <li class="nav-item dropdown menu-institute-mob">
+      <a class="nav-link dropdown-toggle"  role="button"  id="navbardrop" data-toggle="dropdown">
+        WYDZIAŁ i KATEDRY
+      </a>
+      <div class="dropdown-menu">
+ <a href="/?vc=f-0"  class="dropdown-item readmetxt">WYDZIAŁ</a><a href="/vc/Katedra Informatyki"  class="dropdown-item readmetxt">Katedra Informatyki</a><a href="/vc/Katedra Matematyki Stosowanej"  class="dropdown-item readmetxt">Katedra Matematyki Stosowanej</a><a href="https://faculty.it.pk.edu.pl/"  class="dropdown-item readmetxt">Cooperation with the Faculty (in English)</a>      </div>
+      </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        REKRUTACJA      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="?page=kontaktwkr">Wydziałowa Komisja Rekrutacyjna</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=hdwkr">Harmonogram dyżurów</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="http://rekrutacja.pk.edu.pl/index.php">Serwis Rekrutacyjny PK</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="file.php?h=adf654d2100bd2cd64134a6b73624289">II stopień - podział na specjalności</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        STUDIA      </a>
+            <div class="dropdown-menu">
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Studia stacjonarne</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="?page=informatyka">Informatyka</a>
+      <a class="dropdown-item readmetxt" href="?page=matematyka">Matematyka</a>
+      <a class="dropdown-item readmetxt" href="?page=nssirr">Systemy Inteligentne i Rozszerzona Rzeczywistość</a>
+      <a class="dropdown-item readmetxt" href="?page=nsad">Data Science</a>
+      <a class="dropdown-item readmetxt" href="?page=nscb">Cyberbezpieczeństwo</a>
+      <a class="dropdown-item readmetxt" href="?page=wms">Matematyka Stosowana</a>
+
+          </div>
+      </div>    
+
+      
+             
+        <a class="dropdown-item readmetxt" href="http://syllabus.pk.edu.pl/public/links.pk?id=137">Studia niestacjonarne</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="http://iro.pk.edu.pl/">Studia międzynarodowe</a>
+      
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Programy studiów</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="?page=ps23/24">Program studiów 2023/2024</a>
+      <a class="dropdown-item readmetxt" href="?page=ps22/23">Program studiów 2022/2023</a>
+      <a class="dropdown-item readmetxt" href="?page=ps21/22">Program studiów 2021/2022</a>
+
+          </div>
+      </div>    
+
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        STUDENCI      </a>
+            <div class="dropdown-menu">
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Na studiach</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="?page=rz">Rozkłady zajęć</a>
+      <a class="dropdown-item readmetxt" href="?page=ded">Dyplomy, egzamin dyplomowy</a>
+      <a class="dropdown-item readmetxt" href="?page=hse">Harmonogram sesji egzaminacyjnej</a>
+      <a class="dropdown-item readmetxt" href="?page=ora">Organizacja Roku Akademickiego</a>
+      <a class="dropdown-item readmetxt" href="?page=kps">Praktyki studenckie</a>
+      <a class="dropdown-item readmetxt" href="?page=pw">Przedmioty wybieralne</a>
+      <a class="dropdown-item readmetxt" href="?page=kpd">Konkursy na prace dyplomowe</a>
+      <a class="dropdown-item readmetxt" href="?page=ofertystazy">Oferty praktyk i staży</a>
+      <a class="dropdown-item readmetxt" href="?page=djo">Dodatkowe zajęcia z języka obcego</a>
+
+          </div>
+      </div>    
+
+      
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">W Dziekanacie</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="?page=dip">Druki, podania i terminy</a>
+      <a class="dropdown-item readmetxt" href="?page=oplaty">Opłaty podczas studiów</a>
+      <a class="dropdown-item readmetxt" href="?page=gpd">Godziny przyjęć Dziekanatu</a>
+      <a class="dropdown-item readmetxt" href="?page=pytania">Najczęściej zadawane pytania</a>
+      <a class="dropdown-item readmetxt" href="https://ehms.pk.edu.pl/mobile/">Wirtualny dziekanat</a>
+
+          </div>
+      </div>    
+
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=opis">Opiekunowie</a>
+      
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Sprawy socjalne</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="?page=pm">System stypendialny</a>
+      <a class="dropdown-item readmetxt" href="http://www.akademiki.pk.edu.pl/">Domy studenckie</a>
+
+          </div>
+      </div>    
+
+      
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Samorząd</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="https://www.facebook.com/samorzad.wiitpk/">Samorząd Studencki WIiT PK - Facebook</a>
+      <a class="dropdown-item readmetxt" href="?page=aktualnosciwrss">Aktualności</a>
+
+          </div>
+      </div>    
+
+      
+            
+      <div class="dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle readmetxt">Koła Naukowe</a>
+          <div class="dropdown-menu">
+                  <a class="dropdown-item readmetxt" href="https://cosmo.pk.edu.pl/">Koło Naukowe COSMO</a>
+      <a class="dropdown-item readmetxt" href="http://sknm.pk.edu.pl/">Studenckie Koło Naukowe Matematyków</a>
+      <a class="dropdown-item readmetxt" href="https://www.facebook.com/visgraph/">Studenckie Koło Naukowe Grafiki Komputerowej Visgraph</a>
+      <a class="dropdown-item readmetxt" href="https://pl-pl.facebook.com/KNIPK/">Koło Naukowe Informatyków Politechniki Krakowskiej</a>
+      <a class="dropdown-item readmetxt" href="https://www.pk.edu.pl/index.php?option=com_content&view=article&id=38&Itemid=198&lang=pl#2-wydzia%C5%82-fizyki-matematyki-i-informatyki">Inne studenckie koła naukowe PK</a>
+
+          </div>
+      </div>    
+
+      
+             
+        <a class="dropdown-item readmetxt" href="https://ii.pk.edu.pl/ankietawiit/">Wnioski i opinie</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://ankiety.pk.edu.pl/student/login.php">Ankiety PK</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=mds">Microsoft Azure for Education</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://di.pk.edu.pl/uslugi-office-365-dla-studentow/">Office 365 Education</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://kariery.pk.edu.pl/#/">Zawód i praca</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://cewsa.pk.edu.pl/">CEWSA</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        WYKŁADOWCY      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="https://ankiety.pk.edu.pl/pracownik/login.php">Ankiety PK</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=hse">Harmonogram sesji egzaminacyjnej</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="http://syllabus.pk.edu.pl/public/links.pk?id=148">Syllabus PK</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://ehms.pk.edu.pl/mobile/">Wirtualny dziekanat</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://ii.pk.edu.pl/ankietawiit/">Wnioski i opinie</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="page/badstat">Badania statutowe</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="page/PremAkt">Premia za aktywność</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="page/GrProj">Projekty</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://it.pk.edu.pl/file.php?h=d62ba88b2239e6f44cf4c26694916d3f">LIDER</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://cewsa.pk.edu.pl/">CEWSA</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=profPK">Przeniesienie na stanowisko Profesora Uczelni</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://it.pk.edu.pl/panel">Logowanie</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        SPOŁECZEŃSTWO      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="?page=3misja">Trzecia Misja Uczelni</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=wspolpracaKMS">Współpraca KMS</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="?page=rsg">Rada Społeczno - Gospodarcza</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        SZKOŁA DOKTORSKA      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="https://szkoladoktorska.pk.edu.pl/">Szkoła Doktorska PK</a>
+      
+             
+        <a class="dropdown-item readmetxt" href="https://www.facebook.com/people/Szko%C5%82a-Doktorska-Politechnika-Krakowska/100088563853896/">Odwiedź SD PK na facebook</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        WIRTUALNY SPACER WIiT      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="https://wirtualnyspacer.it.pk.edu.pl/">Wirtualny Spacer WIiT</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        PRACUJ NA WIiT      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="?page=pracaWIiT">Pracuj na WIiT</a>
+      
+            </div>     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle readmetxt"  role="button"  id="navbardrop" data-toggle="dropdown">
+        ZAPYTANIA OFERTOWE      </a>
+            <div class="dropdown-menu">
+             
+        <a class="dropdown-item readmetxt" href="?page=zapytaniaofertowe">Zapytania ofertowe</a>
+      
+            </div>     </li>
+
+    </ul>
+
+
+
+<form class="form-inline my-2 my-lg-0" method="post" action="?search">
+      <input class="form-control mr-sm-2" placeholder="" type="text" name="search">
+</form>
+
+
+
+<div class="btn-group">
+<button class="btn btn-b9c6be" onClick="document.location.href='/?lang=pl';"><i class="" aria-hidden="true"></i>
+PL</button>
+<button class="btn btn-b9c6be" onClick="document.location.href='/?lang=en&p=news.php&opt=for-erasmus';"><i class="" aria-hidden="true"></i>
+EN</button>
+</div>
+  
+<div id="helpme" class="btn-group" name="helpme">
+<button class="btn btn-dark"><i class="fa fa-adjust" aria-hidden="true"></i></button>
+<button class="btn btn-dark"><i class="fa fa-plus" aria-hidden="true"></i></button>
+<button class="btn btn-dark" id="faminus"><i class="fa fa-minus" aria-hidden="true"></i></button>
+<button class="btn btn-dark" id="readmetxt"><i class="fa fa-assistive-listening-systems" aria-hidden="true"></i></button>
+
+</div>
+<div class="btn-group">
+<button class="btn btn-b9c6be" onClick="document.location.href='?map';"><i class="fa fa-map-o" aria-hidden="true"></i></button>
+</div>
+
+  </div>
+
+</nav> 
+
+
+<a class="scroll-to-top rounded hand" style="color:white;" onClick="scrollTOP;" style="display: none;">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+  <script>
+  $('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+
+  $('table.linkpk').click(function(){
+      document.location.href="http://www.pk.edu.pl";
+  });
+  $('table.linkfim').click(function(){
+      document.location.href="https://it.pk.edu.pl";
+  });  
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip-refresh"]').tooltip();   
+});
+
+
+var readmetxt=false;
+$('#readmetxt,#readmetxtmobile').click(function(){
+
+  if (readmetxt){
+    readmetxt=false;
+    readtxt("Moduł czytania tekstu został wyłączony");
+    $(this).css('background-color', $('#faminus').css('background-color'));
+    $(this).css('color', $('#faminus').css('color'));
+    setCookie("readmetxt", "0");
+
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "readmetxt" + "=" + "0" + ";" + expires + ";path=/";
+
+  } else {
+    readmetxt=true;
+    if ($(this).attr("id")=="readmetxtmobile"){
+      readtxt("Witamy na stronie internetowej Wydziału Informatyki i Telekomunikacji Politechniki Krakowskiej. Kliknij na pole tekstowe, aby przeczytać zawartość. W górnej części strony znajduje się menu, a w nim m.in. linki do podstron ze szczegółowymi danymi kontaktowymi dotyczącymi wydziału i katedr, a także wyszukiwarka tekstu. Na pasku menu znajdują się dodatkowo opcje ułatwiające nawigację osobom niepełnosprawnym. W części środkowej znajdują się aktualności dla studentów i pracowników oraz informacje o konkursach, stażach i ofertach pracy. W dolnej części strony jest lista ostatnio aktualizowanych informacji, a pod nią ogłoszenia. Na samym dole strony znajdują się podstawowe dane kontaktowe.");
+    }else {
+      readtxt("Witamy na stronie internetowej Wydziału Informatyki i Telekomunikacji Politechniki Krakowskiej. Najedź myszką na pole tekstowe, aby przeczytać zawartość. W górnej części strony znajduje się menu, w tym linki do szczegółowych danych kontaktowych dotyczących wydziału i katedr. Na pasku menu znajdują się dodatkowo m.in.: wyszukiwarka tekstu, zmiana języka strony oraz opcje ułatwiające nawigację osobom niepełnosprawnym, a także mapa strony. W części środkowej znajdują się aktualności dla studentów i pracowników oraz informacje o konkursach, stażach i ofertach pracy. Po prawej stronie jest lista ostatnio aktualizowanych informacji, a pod nią ogłoszenia. Na samym dole strony znajdują się podstawowe dane kontaktowe.");
+    }
+    
+    $(this).css('background-color', 'pink');
+    $(this).css('color', 'black');
+    
+    
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "readmetxt" + "=" + "1" + ";" + expires + ";path=/";
+  }
+      
+  });  
+
+
+  </script></div>
+
+
+<div id='slides' style='width:100%;height:190px;background:white;box-shadow:none;'></div>
+
+<div id="incpage">
+
+<div name='7' mytype="pages" class="alert alert-secondary alert-dismissible fade show">
+
+<div class="container-fluid">
+  <div class="row">
+
+<div class="col-md-9" style="overflow-x: auto;" name="leftload">
+
+<script>
+  document.title = "Rozkłady zajęć - Wydział Informatyki i Telekomunikacji PK";
+
+
+  function titletop(){
+$(document).ready(function(){
+
+var navbh = parseInt($('#navb').css('height'));
+var navbw = parseInt($('#navb').css('width'));
+
+if ($(document).width() > 727 && $('button.navbar-toggler').css('display')=='none' && navbh>55) {
+
+$('#title').css('margin-top', (navbh-35) + "px");
+$('div[name=rightmenu]').css('margin-top', (navbh-35) + "px");
+
+
+} else {
+    $('#title').css('margin-top', 0 + "px");    
+    $('div[name=rightmenu]').css('margin-top', 0 + "px"); 
+  }
+
+  });
+}
+
+window.onresize = function(){
+  titletop();
+};
+window.onload = function(){
+  titletop();
+}; 
+</script>
+
+ <h3 class="text-primary readmetxt" name="title" id="title">Rozkłady zajęć</h3>
+  <hr>
+
+ <div class='readmetxt'></div>
+<br>
+
+<div class="alert readmetxt alert-white">
+ <p><strong>STUDIA STACJONARNE</strong>&nbsp; <br /><br /><u>Plany zajęć:</u></p>
+<div class="obr_nor">
+<ol>
+<li>Kierunek:&nbsp;<em>Informatyka I stopień i II stopień</em>&nbsp;-&nbsp;<a href="../download/209420a7a6e72d4e27dd3dec09325ef8/18022024_1_INFORMATYKA lato rozklad STACJONARNE 2023_2024.xls">pobierz (aktualizacja 18-02-2024)</a></li>
+<li>Kierunek:&nbsp;<em>Matematyka I i II stopień</em>&nbsp;- <a href="../download/6d02214c0bb0e7c794ed193896629d13/12022024_MATEMATYKA lato rozkład 2023_24.xls">pobierz (aktualizacja 12-02-2024)</a></li>
+<li>Kierunek:&nbsp;<em>Matematyka Stosowana - <a href="../download/ed3177c1454f3495a07cc6893c84342d/16022024_MATEMATYKA STOSOWANA lato 2023_24.xls">pobierz (aktualizacja 16-02-2024)</a></em></li>
+</ol>
+<div class="obr_nor">&nbsp;</div>
+</div> <div class="text-right sign">[Mieczysław Mucha, 2024-02-18 20:57]</div>
+</div>
+
+
+<div class="alert readmetxt alert-light">
+ <p><strong>STUDIA NIESTACJONARNE&nbsp;</strong> <br /><br /><u><strong><span style="color: #cc3399;">Uwaga studenci studi&oacute;w niestacjonarnych!<br /><br />Podział na grupy w Wirtualnym Dziekanacie na indywidualnych kontach, dostępne po zalogowaniu.</span></strong></u><br /><br /><br /><u>Plany zajęć:</u></p>
+<ol>
+<li>Kierunek:&nbsp;<em>Informatyka I stopień i II stopień</em>&nbsp;-&nbsp;<a href="../download/d053d8b4940ef921d44a61688bac5e5d/18022024_1_INFORMATYKA lato rozklad NIESTACJONARNE 2023_2024.xls">pobierz (aktualizacja 18-02-2024)</a></li>
+</ol> <div class="text-right sign">[Mieczysław Mucha, 2024-02-18 20:57]</div>
+</div>
+
+
+<div class="alert readmetxt alert-white">
+ <p><strong>Objaśnienia skr&oacute;t&oacute;w:</strong></p>
+<ol>
+<li><strong>KI, II, IMK</strong>&nbsp;- sale w Katedrze Informatyki, bud. Wydziału Inżynierii i Technologii Chemicznej, I Piętro, ul. Warszawska 24</li>
+<li>sale: <strong>131</strong>&nbsp;(Houston, ul. Warszawska 24),&nbsp;<strong>F020</strong>&nbsp;(ul. Podchorążych 1),&nbsp;<strong>F112</strong>&nbsp;(ul. Podchorążych 1)</li>
+<li>sale: <strong>135, 136, 142, 143, 150, 151</strong>&nbsp;(ul. Warszawska 24)</li>
+<li><strong>IM, KMS, KM</strong> - sale w Katedrze Matematyki Stosowanej, bud. Wydziału Inżynierii Elektrycznej i Komputerowej, ul. Warszawska 24</li>
+<li><strong>IF, F???</strong>&nbsp;- sale w Instytucie Fizyki, ul. Podchorążych 1</li>
+<li><strong>WIEK</strong>&nbsp;- sale w bud. Wydz. Inżynierii Elektrycznej i Komputerowej, ul. Warszawska 24</li>
+<li><strong>S1,S2,S3</strong>&nbsp;- sale KMS nad stoł&oacute;wką (galeria GIL), ul. Warszawska 24</li>
+<li><strong style="color: red;">aule: 1/15, 0/1, 0/19, 1/7, 1/9</strong>&nbsp;- sale wykładowe budynku Działowni, ul. Warszawska 24</li>
+</ol>
+<br />
+<div><img style="display: block; margin-left: auto; margin-right: auto;" src="../download/950d6bc519e68e20f0ae7353941de11f/mapa_sale_WIiT.png" alt="" width="1024" height="1024" /></div> <div class="text-right sign">[Daniel Grzonka, 2023-09-12 18:10]</div>
+</div>
+
+
+ <div class="text-right sign">[Mieczysław Mucha, 2018-08-21 18:31]</div>
+
+</div>
+
+<div class="col-md-3" style="overflow-x:auto;" name="rightmenu">
+<table class="smallmap table table-striped">
+
+     <tbody>
+
+<tr ><td style='font-weight:bold;' class='readmetxt'>STUDENCI</td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='https://ankiety.pk.edu.pl/student/login.php'>Ankiety PK</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='https://cewsa.pk.edu.pl/'>CEWSA</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'>Koła Naukowe</td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://www.pk.edu.pl/index.php?option=com_content&view=article&id=38&Itemid=198&lang=pl#2-wydzia%C5%82-fizyki-matematyki-i-informatyki'>Inne studenckie koła naukowe PK</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://cosmo.pk.edu.pl/'>Koło Naukowe COSMO</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://pl-pl.facebook.com/KNIPK/'>Koło Naukowe Informatyków Politechniki Krakowskiej</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://www.facebook.com/visgraph/'>Studenckie Koło Naukowe Grafiki Komputerowej Visgraph</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='http://sknm.pk.edu.pl/'>Studenckie Koło Naukowe Matematyków</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='?page=mds'>Microsoft Azure for Education</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'>Na studiach</td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=djo'>Dodatkowe zajęcia z języka obcego</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=ded'>Dyplomy, egzamin dyplomowy</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=hse'>Harmonogram sesji egzaminacyjnej</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=kpd'>Konkursy na prace dyplomowe</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=ofertystazy'>Oferty praktyk i staży</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=ora'>Organizacja Roku Akademickiego</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=kps'>Praktyki studenckie</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=zps'>Programy stypendialne</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=pw'>Przedmioty wybieralne</a></td></tr><tr style=color:black;font-weight:bold;';><td style='padding-left:80px' class='readmetxt'><a href='?page=rz'>Rozkłady zajęć</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='https://di.pk.edu.pl/uslugi-office-365-dla-studentow/'>Office 365 Education</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='?page=opis'>Opiekunowie</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='?page=aktualnosciwrss'>Samorząd</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=aktualnosciwrss'>Aktualności</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://www.facebook.com/samorzad.wiitpk/'>Samorząd Studencki WIiT PK - Facebook</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'>Sprawy socjalne</td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='http://www.akademiki.pk.edu.pl/'>Domy studenckie</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=lsoc'>Listy - decyzje</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=pm'>System stypendialny</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'>W Dziekanacie</td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=dip'>Druki, podania i terminy</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=gpd'>Godziny przyjęć Dziekanatu</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=pytania'>Najczęściej zadawane pytania</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='?page=oplaty'>Opłaty podczas studiów</a></td></tr><tr ><td style='padding-left:80px' class='readmetxt'><a href='https://ehms.pk.edu.pl/mobile/'>Wirtualny dziekanat</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='https://ii.pk.edu.pl/ankietawiit/'>Wnioski i opinie</a></td></tr><tr ><td style='padding-left:20px' class='readmetxt'><a href='https://kariery.pk.edu.pl/#/'>Zawód i praca</a></td></tr>
+
+</tbody>
+</table>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+
+<script>
+  scrollbool = -1;
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 200 && scrollbool != 1) {
+            scrollbool = 1;
+
+            $('#main').slideUp(500);
+            if ($(window).width() > 727) {
+                
+                $('#navb').css('background-size', '80px');
+                $('#navb').css('background-position', '10px -10px');
+            }
+
+
+        } else if ($(window).scrollTop() <= 0) {
+            scrollbool = 0;
+
+            setTimeout("$('#main').slideDown(500);$('#navb').css('background-image','none');", 200);
+
+        }
+
+
+        if ($(window).scrollTop() > 60) {
+            $('a.scroll-to-top').show();
+        } else {
+            $('a.scroll-to-top').fadeOut(500);
+        }
+    });
+
+    $('a.scroll-to-top').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+    });
+
+if ($('#slides').css('display')!="none"){
+} 
+
+
+  if (news_win_hidden.length > 1 || notices_win_hidden.length > 1) {
+    $('#reloadme').addClass('fa-spin');
+  }
+</script>
+
+
+<div style="display:none;max-width:500px;z-index:10000000" name="cookieinfo" class="alert alert-warning sticky-bottom alert-dismissible fade show">
+  <button type="button" name="hiddencookie" class="close" data-dismiss="alert">&times;</button>
+  Informujemy, że na stronie używane są tzw. pliki Cookies w celu personalizacji ustawień wyświetlania elementów na stronie.
+</div>
+
+  <div class="alert alert-white-white foot-padding">
+   <div class="container-fluid" style="">
+   
+    <div class="row">
+      <div class="col-sm-4" style="padding:2px;">
+          
+<ul class="list-group">
+          <li class="list-group-item list-group-item-e3e8e5 readmetxt">ADRES</li>
+          <li class="list-group-item list-group-item-action readmetxt" style="padding-bottom:0px;"><p><strong>Siedziba </strong><a title="mapa" href="https://goo.gl/maps/TBm5NWZYz2hCcYFW9" target="_blank" rel="noopener"><span style="color: inherit;">(mapa)</span></a><strong>:</strong>&nbsp;<br />ul. Warszawska 24, 31-155 Krak&oacute;w, Polska<br />Wydział Architektury (lewy parter)</p></li>
+</ul>
+
+
+      </div>
+      <div class="col-sm-4" style="padding:2px;">
+          
+<ul class="list-group">
+          <li class="list-group-item list-group-item-e3e8e5 readmetxt">TELEFONY</li>
+          <li class="list-group-item list-group-item-action readmetxt" style="padding-bottom:0px;"><p><strong>Dziekanat kontakt:</strong>&nbsp;<a href="../?i=vc-f-contact.php&amp;vc=f-0" target="_blank" rel="noopener">dane kontaktowe</a><strong><br />Administracja Wydziału:</strong>&nbsp;<a href="../?i=vc-f-contact.php&amp;vc=f-0" target="_blank" rel="noopener">dane kontaktowe</a><br /> <strong>Biuro Dziekana:</strong>&nbsp;<a href="../?i=vc-f-contact.php&amp;vc=f-0" target="_blank" rel="noopener">dane kontaktowe</a></p></li>
+</ul>
+ 
+</div>
+      <div class="col-sm-4" style="padding:2px;">
+
+<ul class="list-group">
+          <li class="list-group-item list-group-item-e3e8e5 readmetxt">COPYRIGHT</li>
+          <li class="list-group-item list-group-item-action readmetxt" style="padding-bottom:0px;"><p>Wszystkie prawa zastrzeżone<br /><strong>Wydział Informatyki i Telekomunikacji</strong><br /> Politechnika Krakowska</p></li>
+</ul>
+
+
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+    <div class="col-sm-12 alert">
+    <a href="Deklaracja_dostepnosci_WIiT.html">Deklaracja dostępności</a>
+    </div>
+
+</div>  </div>
+
+<script>
+  if (cookieinfo.length <= 1) {
+    $('div.alert[name=cookieinfo]').show();
+  }
+
+  $('div.alert[name=cookieinfo] button[name].close').click(function () {
+    setparam('cookie_win_hidden', $(this).attr('name'), 'y');
+  });
+</script>
+<script src="myjs.min.js?v=8"></script>
+
+<div id='loadingwait' style="display:none;z-index:10000000;background:rgba(255,255,255,0.65);width:100%;height:100%;left:0px;top:0px;position:fixed;">
+  <div class='center'>
+    <span class="fa fa-refresh fa-spin" style="font-size:50px;"></span></div>
+</div>
+
+<script>
+  $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+    if (!$(this).next().hasClass('show')) {
+      $(this)
+        .parents('.dropdown-menu')
+        .first()
+        .find('.show')
+        .removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+
+    $(this)
+      .parents('li.nav-item.dropdown.show')
+      .on('hidden.bs.dropdown', function (e) {
+        $('.dropdown-submenu .show').removeClass("show");
+      });
+
+    return false;
+  });
+
+  
+
+function runreadmetxt(){
+
+  $('.readmetxt').mouseenter(function(){
+  if (readmetxt){
+    $(this).css('text-shadow', '2px 2px 5px red');
+    readtxt($(this).html());
+  }
+});
+$('.readmetxt').mouseleave(function(){
+  if (readmetxt){
+    stoptxt();
+    $(this).css('text-shadow', 'none');
+  }
+});
+
+}
+runreadmetxt();
+
+
+
+
+</script>
+
+</body>
+
+</html>
